@@ -1,0 +1,22 @@
+<div class="row no-gutters">
+    <div class="col-12 text-center mt-4 mb-4">
+        <h1>{{question}}</h1>
+    </div>
+</div>
+
+<div class="row no-gutters">
+    <button type="button" class="btn btn-primary rounded-0  col-12"  *ngFor="let item of answers; let index=index"
+     [ngClass]="'col-sm-'+(12/answers.length)" (click)="ckeckAnswerIndex(index)">
+        {{item.answer}}
+    </button>
+</div>
+
+<div class="row no-gutters ">
+    <div class="alert alert-primary mt-4 w-100  text-center" *ngIf="answerChoosed && answerCorrect" role="alert">
+        <strong>correcto</strong>
+    </div>
+
+    <div class="alert alert-danger mt-4 w-100 text-center" *ngIf="answerChoosed && !answerCorrect" role="alert">
+        <strong>incorrecto</strong>
+    </div>
+</div>
