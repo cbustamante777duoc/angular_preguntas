@@ -1,5 +1,9 @@
 # Preguntas
 
+Proyecto en el cual se usa el ng-for, ng-if y ng-container
+el consiste en realizar una pregunta y mostrar por pantalla si la respuesta es correcta
+ademas incluye algunas validaciones
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
 
 ## Development server
