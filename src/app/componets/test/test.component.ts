@@ -56,5 +56,35 @@ export class TestComponent implements OnInit {
     
   }
 
+  ckeckAnswerQuestion(){
+    //si la pregunta esta vacia
+    if (!this.question) {
+      return false;
+    }
+
+    // si no existe la pregunta o la pregunta no es un arreglo
+    if (!this.answers || !Array.isArray(this.answers)) {
+      return false;
+    }else{
+
+      // las preguntas deben estar en el rango  2 y 4
+       if (!(this.answers.length >=2 && this.answers.length <=4)) {
+         return false;
+         
+       } 
+
+      //filtra las respuesta en una variable
+      const correctAnswers = this.answers.filter(answer => answer.correct);
+      //si esta variable tiene mas un valor esta malo
+      if (correctAnswers.length !== 1) {
+        return false;
+      
+      }
+    }
+    
+    return true;
+   
+  }
+
 
 }

@@ -1,3 +1,7 @@
+<ng-container *ngIf="ckeckAnswerQuestion()">
+
+
+
 <div class="row no-gutters">
     <div class="col-12 text-center mt-4 mb-4">
         <h1>{{question}}</h1>
@@ -20,3 +24,14 @@
         <strong>incorrecto</strong>
     </div>
 </div>
+
+</ng-container>
+
+<ng-container *ngIf="!ckeckAnswerQuestion()" >
+    <div class="row no-gutters">
+        <div class="col-12 text-center mt-4 mb-4">
+            <h1>revisar las preguntas y las respuestas</h1>
+        </div>
+    </div>
+
+</ng-container>
